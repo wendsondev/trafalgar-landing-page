@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    &.active{
+      font-weight: 700;
+    }
+    
+    font-size: 1.125rem;
+    color: var(--gray-500);
+  }
+}

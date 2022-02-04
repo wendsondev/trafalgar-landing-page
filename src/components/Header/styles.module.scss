@@ -1,0 +1,13 @@
+.container {
+  max-height: 5rem;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+
+  > div {
+    width: 70rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
