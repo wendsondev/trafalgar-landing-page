@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray-500: #7D7987;
+
+  --blue-200: #67C3F3;
+  --blue-400: #5A98F2;
+  --blue-500: #458FF6;
+  --blue-700: #233348;
+
+  --purple-700: #1F1534;
+}
+
+body, input, textarea, select, button {
+  font: 400 1rem 'Mulish', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--white);
+}
+
+@media screen and (max-width: 1080px) {
+  html{
+    font-size: 93.75%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  html{
+    font-size: 87.50%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
