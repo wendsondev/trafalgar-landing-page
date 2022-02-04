@@ -1,0 +1,86 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  .services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+      max-width: 28rem;
+
+      h1 {
+        font-size: 3rem;
+        color: var(--black);
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: var(--gray-500);
+      }
+
+      button {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 0;
+        border-radius: 9999px;
+        background: var(--blue-500);
+        color: var(--white);
+      }
+    }
+
+    img{
+      max-height: 38rem;
+    }
+  }
+
+  .ourServices {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+
+    .headerOurServices {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      max-width: 60rem;
+      text-align: center;
+
+      h2 {
+        font-size: 2.5rem;
+        color: var(--black);
+      }
+
+      > div {
+        width: 5rem;
+        height: .25rem;
+        border-radius: 9999px;
+        background: var(--black);
+      }
+
+      p {
+        font-size: 1.125rem;
+        color: var(--gray-500);
+      }
+    }
+
+    > button {
+      font-size: 1.125rem;
+      margin: 1rem 0;
+      padding: 1rem 2rem;
+      color: var(--blue-500);
+      border: .2rem solid var(--blue-500);
+      border-radius: 9999px;
+      background: transparent;
+    }
+  }
+}
