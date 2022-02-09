@@ -1,14 +1,97 @@
 .container {
   display: flex;
   align-items: center;
-  gap: 2rem;
 
-  a {
-    &.active{
-      font-weight: 700;
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      &.active{
+        font-weight: 700;
+        color: var(--blue-700)
+      }
+      
+      font-size: 1.125rem;
+      color: var(--gray-500);
     }
-    
-    font-size: 1.125rem;
-    color: var(--gray-500);
+  }
+
+  .menuMobile, .closeMenuMobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 750px) {
+    .menuMobile {
+      display: flex;
+      color: var(--blue-700);
+    }
+
+    .menu {
+      width: 0px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 5rem;
+      overflow: hidden;
+      z-index: -1;
+      
+      position: fixed;
+      top: 0;
+      right: 0;
+      transition: .5s;
+      background: var(--blue-400);
+
+      &.active {
+        width: 50%;
+        
+        overflow: visible;
+
+        transition: .5s;
+        z-index: 1000;
+      }
+
+      a {
+        font-size: 2rem;
+        color: var(--white);
+
+        padding: 1.5rem 0;
+        white-space: nowrap;
+        line-height: .5rem;
+        border-bottom: .2rem solid transparent;
+
+        transition: .3s;
+        
+        &.active {
+          color: var(--white);
+          font-weight: 700;
+          border-bottom: .2rem solid var(--white);
+          transition: .3s;
+        }
+      }
+    }
+
+    .closeMenuMobile {
+      display: flex;
+      color: var(--white);
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1001;
+
+      animation: fadeMenu .4s linear;
+
+      @keyframes fadeMenu {
+        from {
+          opacity: 0%;
+        }
+
+        to {
+          opacity: 100%;
+        }
+      }
+    }
   }
 }
