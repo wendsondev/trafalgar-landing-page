@@ -1,5 +1,6 @@
 import { BoxServiceCard } from './BoxServiceCard';
 import styles from './styles.module.scss';
+import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 
 export function Home () {
   return (
@@ -28,6 +29,37 @@ export function Home () {
           <BoxServiceCard />
 
           <button>Learn more</button>
+        </section>
+
+        <section className={styles.findADoctor}>
+          <img src="/illustration_2.png" alt="find a doctor" />
+
+          <div>
+            <h2>Leading healthcare providers</h2>
+
+            <div />
+
+            <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it's not just work. We take pride in the solutions we deliver</p>
+
+            <button>Learn more</button>
+          </div>
+        </section>
+
+        <section className={styles.apps}>
+          <div>
+            <h2>Download our mobile apps</h2>
+
+            <div />
+
+            <p>Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious form, long calls, or administrative hassle) and securely</p>
+
+            <button>
+              Download
+              <HiOutlineArrowNarrowDown size={24} />
+            </button>
+          </div>
+
+          <img src="/illustration_3.png" alt="App" />
         </section>
       </main>
   );
