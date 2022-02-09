@@ -2,6 +2,7 @@ import { BoxServiceCard } from './BoxServiceCard';
 import styles from './styles.module.scss';
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 import { TestimonialsBox } from './TestimonialsBox';
+import { ArticleCard } from './ArticleCard';
 
 export function Home () {
   return (
@@ -64,6 +65,37 @@ export function Home () {
         </section>
 
         <TestimonialsBox />
+
+        <section className={styles.aboutUs}>
+          <h2>Check out our latest article</h2>
+
+          <div className={styles.aboutUsSeparator} />
+
+          <div className={styles.articleCardBox}>
+            <ArticleCard 
+              imgUrl="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=350"
+              title="disease detection, check up in the laboratory"
+              summary="In this case, the role of the health laboratory is very important to do a disease detection..."
+              link="#"
+            />
+
+            <ArticleCard 
+              imgUrl="https://images.unsplash.com/photo-1582560475093-ba66accbc424?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=350"
+              title="Herbal medicines that are safe for consumption"
+              summary="Herbal medicine is very widely used at this time because of its very good for your health..."
+              link="#"
+            />
+
+            <ArticleCard 
+              imgUrl="https://images.unsplash.com/photo-1531299244174-d247dd4e5a66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=350"
+              title="Natural care for healthy"
+              summary="A healthy lifestyle should start from now and also for your skin health. There are some..."
+              link="#"
+            />
+          </div>
+
+          <button>View all</button>
+        </section>
       </main>
   );
 }

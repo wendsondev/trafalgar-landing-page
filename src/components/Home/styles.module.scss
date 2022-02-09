@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 10rem;
   padding: 2rem;
 
   .services {
@@ -180,6 +180,49 @@
         border-radius: 9999px;
         background: transparent;
       }
+    }
+  }
+
+  .aboutUs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .aboutUsSeparator {
+      width: 3.5rem;
+      height: .2rem;
+      border-radius: 9999px;
+      background: var(--black);
+    }
+
+    .articleCardBox {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      max-width: 12rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0;
+      padding: 1rem 2rem;
+      color: var(--blue-500);
+      border: .2rem solid var(--blue-500);
+      border-radius: 9999px;
+      background: transparent;
     }
   }
 }
