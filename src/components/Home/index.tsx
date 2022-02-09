@@ -1,6 +1,7 @@
 import { BoxServiceCard } from './BoxServiceCard';
 import styles from './styles.module.scss';
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
+import { TestimonialsBox } from './TestimonialsBox';
 
 export function Home () {
   return (
@@ -61,6 +62,8 @@ export function Home () {
 
           <img src="/illustration_3.png" alt="App" />
         </section>
+
+        <TestimonialsBox />
       </main>
   );
 }

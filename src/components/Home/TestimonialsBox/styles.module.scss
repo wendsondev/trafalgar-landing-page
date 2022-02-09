@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+  overflow: hidden;
+
+  .testimonial {
+    max-width: 70rem;
+    max-height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 7px var(--gray-500);
+    background: linear-gradient(var(--blue-200), var(--blue-400));
+    
+    &.fade {
+      animation: animationFade .3s ease-in-out;
+    }
+
+    @keyframes animationFade {
+      0% {
+        transform: translateX(12rem);
+        filter: blur(.1rem);
+        opacity: 80%;
+      }
+
+      50% {
+        opacity: 100%;
+        filter: blur(0);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+  
+    .separator {
+      width: 3.5rem;
+      height: .25rem;
+      border-radius: 9999px;
+      margin-bottom: 2rem;
+      background: var(--white);
+    }
+  
+    .content {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: space-around;
+      align-items: center;
+  
+      p {
+        max-width: 26rem;
+        font-size: 1.125rem;
+        color: var(--white);
+      }
+    }
+  
+    .userInfo {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    
+      img { 
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+        border: .25rem solid var(--white);
+        border-radius: 9999px;
+      }
+    
+      div {
+        display: flex;
+        flex-direction: column;
+    
+    
+        strong {
+          font-weight: 700;
+          font-size: 1.5rem;
+          color: var(--white);
+        }
+    
+        span {
+          font-size: 1rem;
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .carouselNav {
+    max-width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+
+    button {
+      width: 20rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 0;
+      background: transparent;
+
+      &:disabled {
+        cursor: default;
+
+        svg {
+          color: var(--blue-200);
+        }
+      }
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+        color: var(--blue-500);
+      }
+    }
+
+    .controller {
+      display: flex;
+      gap: 1rem;
+
+      span {
+        width: .75rem;
+        height: .75rem;
+        display: flex;
+        border-radius: 9999px;
+        background: var(--blue-200);
+  
+        &.active {
+          background: var(--blue-500);
+        }
+      }
+    }
+    
+  }
+}
