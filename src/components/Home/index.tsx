@@ -20,7 +20,7 @@ export function Home () {
     if(ref.current){
       window.scrollTo({
         behavior: 'smooth',
-        top: ref.current.offsetTop,
+        top: ref.current.offsetTop - 100,
       })
     }
   }
