@@ -225,4 +225,12 @@
       background: transparent;
     }
   }
+
+  @media screen and (max-width: 750px) {
+    .services, .findADoctor, .apps {
+      > img {
+        width: 100%;
+      }
+    }
+  }
 }
