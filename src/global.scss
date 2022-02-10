@@ -41,6 +41,12 @@ body {
   }
 }
 
+@media screen and (max-width: 400px) {
+  html{
+    font-size: 81.25%;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
