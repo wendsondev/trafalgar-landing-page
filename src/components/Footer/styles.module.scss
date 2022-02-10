@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
   background: linear-gradient(var(--blue-200), var(--blue-400));
 
   .details {
