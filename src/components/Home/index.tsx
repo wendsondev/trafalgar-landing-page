@@ -3,11 +3,58 @@ import styles from './styles.module.scss';
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 import { TestimonialsBox } from './TestimonialsBox';
 import { ArticleCard } from './ArticleCard';
+import { RefObject, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export function Home () {
+
+  const homeRef = useRef<HTMLDivElement>(null);
+  const findADoctorRef = useRef<HTMLDivElement>(null);
+  const appsRef = useRef<HTMLDivElement>(null);
+  const testimonialsRef = useRef<HTMLDivElement>(null);
+  const aboutUsRef = useRef<HTMLDivElement>(null);
+
+  const { hash } = useLocation();
+
+  const scrollTo = (ref: RefObject<HTMLDivElement>) => {
+    if(ref.current){
+      window.scrollTo({
+        behavior: 'smooth',
+        top: ref.current.offsetTop,
+      })
+    }
+  }
+
+  useEffect(() => {
+    switch(hash){
+      case '#home':
+        scrollTo(homeRef)
+      break;
+
+      case '#find':
+        scrollTo(findADoctorRef)
+      break;
+
+      case '#apps':
+        scrollTo(appsRef)
+      break;
+
+      case '#testimonials':
+        scrollTo(testimonialsRef)
+      break;
+
+      case '#about':
+        scrollTo(aboutUsRef)
+      break;
+
+      default:
+      break;
+    }
+  }, [hash])
+
   return (
     <main className={styles.container}>
-        <section className={styles.services}>
+        <section className={styles.services} ref={homeRef}>
           <div>
             <h1>Virtual healthcare for you</h1>
 
@@ -33,7 +80,7 @@ export function Home () {
           <button>Learn more</button>
         </section>
 
-        <section className={styles.findADoctor}>
+        <section className={styles.findADoctor} ref={findADoctorRef}>
           <img src="/illustration_2.png" alt="find a doctor" />
 
           <div>
@@ -47,7 +94,7 @@ export function Home () {
           </div>
         </section>
 
-        <section className={styles.apps}>
+        <section className={styles.apps} ref={appsRef}>
           <div>
             <h2>Download our mobile apps</h2>
 
@@ -64,9 +111,11 @@ export function Home () {
           <img src="/illustration_3.png" alt="App" />
         </section>
 
-        <TestimonialsBox />
+        <div ref={testimonialsRef}>
+          <TestimonialsBox />
+        </div>
 
-        <section className={styles.aboutUs}>
+        <section className={styles.aboutUs} ref={aboutUsRef}>
           <h2>Check out our latest article</h2>
 
           <div className={styles.aboutUsSeparator} />
