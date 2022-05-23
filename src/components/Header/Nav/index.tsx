@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { HiMenu, HiMenuAlt3 } from 'react-icons/hi';
+import { HashLink } from 'react-router-hash-link';
 import styles from './styles.module.scss';
 
-export function Nav () {
+export function Nav() {
 
   const [currentActive, setCurrentActive] = useState('');
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -11,40 +12,51 @@ export function Nav () {
     <nav className={styles.container}>
 
       <div className={`${styles.menu} ${menuIsOpen ? styles.active : ''}`}>
-        <a className={currentActive === 'home' ? styles.active : ''} href="#home" 
-          onClick={() => setCurrentActive('home')}>Home</a>
+        <HashLink
+          to="#home"
+          smooth
+          className={currentActive === 'home' ? styles.active : ''}
+          onClick={() => setCurrentActive('home')}>Home</HashLink>
 
-        <a href="#find" 
+        <HashLink
+          to="#find"
+          smooth
           className={currentActive === 'find' ? styles.active : ''}
-          onClick={() => setCurrentActive('find')}>Find a doctor</a>
+          onClick={() => setCurrentActive('find')}>Find a doctor</HashLink>
 
-        <a href="#apps"
+        <HashLink
+          to="#apps"
+          smooth
           className={currentActive === 'apps' ? styles.active : ''}
-          onClick={() => setCurrentActive('apps')}>Apps</a>
+          onClick={() => setCurrentActive('apps')}>Apps</HashLink>
 
-        <a href="#testimonials"
+        <HashLink
+          to="#testimonials"
+          smooth
           className={currentActive === 'testimonials' ? styles.active : ''}
-          onClick={() => setCurrentActive('testimonials')}>Testimonials</a>
+          onClick={() => setCurrentActive('testimonials')}>Testimonials</HashLink>
 
-        <a href="#about"
+        <HashLink
+          to="#about"
+          smooth
           className={currentActive === 'about' ? styles.active : ''}
-          onClick={() => setCurrentActive('about')}>About Us</a>
+          onClick={() => setCurrentActive('about')}>About Us</HashLink>
       </div>
 
       {
         menuIsOpen ?
-          <HiMenuAlt3 
-            size={48} 
-            className={styles.closeMenuMobile} 
+          <HiMenuAlt3
+            size={48}
+            className={styles.closeMenuMobile}
             onClick={() => setMenuIsOpen(!menuIsOpen)}
           />
-        :
-          <HiMenu 
-            size={48} 
+          :
+          <HiMenu
+            size={48}
             className={styles.menuMobile}
             onClick={() => setMenuIsOpen(!menuIsOpen)}
           />
       }
-    </nav> 
+    </nav>
   );
 }
