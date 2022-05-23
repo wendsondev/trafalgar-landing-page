@@ -1,108 +1,78 @@
-import { useEffect, useState } from 'react';
 import { testimonials } from '../../../util/testimonialsData';
 import styles from './styles.module.scss';
-import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
+import { Autoplay, Pagination, Keyboard, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperButtonControl } from '../../SwiperButtonControl';
 
-export function TestimonialsBox () {
+import "swiper/css";
+import "swiper/css/pagination";
 
-  const [page, setPage] = useState(0)
-  const [isFade, setIsFade] = useState(false);
-  const data = testimonials;
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIsFade(true);
-
-      if(page < data.length - 1){
-        setPage(pageCurrent => pageCurrent + 1 );
-      }
-      else{
-        setPage(0);
-      }
-
-    }, 5000)
-
-    return () => clearInterval(timer);
-
-  }, [page]);
-
-  const handleNextTestimonialPage = () => {
-    if(page > 0){
-      setPage(currentPage => currentPage - 1);
-      setIsFade(true);
-    }
-  }
-
-  const handlePreviousTestimonialPage = () => {
-    if(page < data.length){
-      setPage(currentPage => currentPage + 1);
-      setIsFade(true);
-    }
-  }
+export function TestimonialsBox() {
 
   return (
-    <section className={styles.container}>
+    <Swiper
+      modules={[Keyboard, Pagination, Navigation, Autoplay]}
+      spaceBetween={30}
+      slidesPerView={1}
+      pagination={{
+        clickable: true,
+        el: '.custom-pagination',
+      }}
+      keyboard={{ enabled: true }}
+      loop
+      autoplay={{
+        delay: 5000,
+        waitForTransition: true,
+      }}
+      onSwiper={(swiper) => swiper.pagination.el.classList.remove('swiper-pagination-bullets')}
+    >
+      {
+        testimonials.map((item) => {
+          return (
+            <SwiperSlide key={item.id}>
+              <div className={styles.container}>
+                <div className={styles.testimonial}
+                >
+                  <h2>What our customer are saying</h2>
 
-      <div className={`${styles.testimonial} ${isFade ? styles.fade : ''}`} 
-        onAnimationEnd={() => setIsFade(false)}
-      >
-        <h2>What our customer are saying</h2>
+                  <div className={styles.separator} />
 
-        <div className={styles.separator} />
+                  <div className={styles.content}>
 
-        <div className={styles.content}>
+                    <div className={styles.userInfo}>
+                      <img src={item.user.imgUrl} alt={item.user.name} />
 
-          <div className={styles.userInfo}>
-            <img src={data[page].user.imgUrl} alt={data[page].user.name} />
+                      <div>
+                        <strong>{item.user.name}</strong>
+                        <span>{item.user.profession}</span>
+                      </div>
 
-            <div>
-              <strong>{data[page].user.name}</strong>
-              <span>{data[page].user.profession}</span>
-            </div>
-            
-          </div>
+                    </div>
 
-          <p>
-            {
-              data[page].testimonial.length > 200 
-              ? `${data[page].testimonial.slice(0, 200)}...`
+                    <p>
+                      {
+                        item.testimonial.length > 200
+                          ? `${item.testimonial.slice(0, 200)}...`
 
-              : data[page].testimonial
-            }
-          </p>
-        </div>
+                          : item.testimonial
+                      }
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          );
+        })
+
+      }
+
+      <div className={styles.controller}>
+        <SwiperButtonControl type="prev" />
+
+        <div className='custom-pagination' />
+
+        <SwiperButtonControl type="next" />
       </div>
-
-      <nav className={styles.carouselNav}>
-        
-        <button 
-          disabled={page <= 0 ? true : false}
-          onClick={handleNextTestimonialPage}
-        >
-          <ImArrowLeft2 />
-        </button>
-        
-        <div className={styles.controller}>
-          {
-            data.map( item => {
-              return (
-                <span 
-                  key={item.id} 
-                  onClick={() => setPage(item.id - 1)}
-                  className={item.id - 1 === page ? styles.active : ''} 
-                />
-              );
-            })
-          }
-        </div>
-        
-        <button 
-          disabled={page >= data.length - 1 ? true : false} 
-          onClick={handlePreviousTestimonialPage}
-        >
-          <ImArrowRight2 />
-        </button>
-      </nav>
-    </section>
+    </Swiper>
   );
 }
