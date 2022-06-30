@@ -1,4 +1,4 @@
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import { ImArrowRight2 } from 'react-icons/im';
 import styles from './styles.module.scss';
 
 type ArticleCardProps = {
@@ -8,7 +8,7 @@ type ArticleCardProps = {
   link: string;
 }
 
-export function ArticleCard ({ imgUrl, title, summary, link } : ArticleCardProps) {
+export function ArticleCard({ imgUrl, title, summary, link }: ArticleCardProps) {
   return (
     <article className={styles.container}>
       <img src={imgUrl} alt={title} />
@@ -17,12 +17,12 @@ export function ArticleCard ({ imgUrl, title, summary, link } : ArticleCardProps
         <strong>{title}</strong>
 
         <p>{summary}</p>
-
-        <a href={link}>
-          Read more
-          <HiOutlineArrowNarrowRight />
-        </a>
       </div>
+
+      <a href={link}>
+        Read more
+        <ImArrowRight2 size={14} />
+      </a>
     </article>
   );
 }

@@ -1,0 +1,37 @@
+.button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  gap: .5rem;
+  border: 0;
+  border-radius: 9999px;
+  border: .2rem solid transparent;
+  background: var(--blue-500);
+  color: var(--white);
+  transition: .3s;
+
+  &:hover {
+    background: transparent;
+    color: var(--blue-500);
+    border-color: var(--blue-500);
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.inverted {
+  color: var(--blue-500);
+  border: .2rem solid var(--blue-500);
+  background: transparent;
+
+  &:hover {
+    color: var(--white);
+    background: var(--blue-500);
+  }
+}

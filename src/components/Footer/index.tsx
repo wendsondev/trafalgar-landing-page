@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
+import { HashLink } from 'react-router-hash-link';
 
-export function Footer () {
+export function Footer() {
   return (
     <footer className={styles.container}>
       <div className={styles.details}>
@@ -8,17 +9,24 @@ export function Footer () {
 
         <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone</p>
 
-        <span>©Trafalgar PTY LTD 2020. All rights reserved</span>
+        <span>Copyright © 2022 Wendson Sousa. All rights reserved</span>
       </div>
 
-      
       <div className={styles.more}>
         <strong>Company</strong>
 
-        <a href="#about">About</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#find">Find a doctor</a>
-        <a href="#apps">Apps</a>
+        <HashLink to="#about" smooth>
+          About
+        </HashLink>
+        <HashLink to="#testimonials" smooth>
+          Testimonials
+        </HashLink>
+        <HashLink to="#find" smooth>
+          Find a doctor
+        </HashLink>
+        <HashLink to="#apps" smooth>
+          Apps
+        </HashLink>
       </div>
 
       <div className={styles.more}>
@@ -38,7 +46,7 @@ export function Footer () {
         <a href="#">Instructions</a>
         <a href="#">How it works</a>
       </div>
-      
+
     </footer>
   );
 }

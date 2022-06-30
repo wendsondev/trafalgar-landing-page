@@ -1,8 +1,9 @@
+import { IoIosArrowDown } from 'react-icons/io';
+import { Button } from '../Button';
+import { ArticleCard } from './ArticleCard';
 import { BoxServiceCard } from './BoxServiceCard';
 import styles from './styles.module.scss';
-import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 import { TestimonialsBox } from './TestimonialsBox';
-import { ArticleCard } from './ArticleCard';
 
 export function Home() {
 
@@ -15,7 +16,7 @@ export function Home() {
 
           <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone</p>
 
-          <button>Consult today</button>
+          <Button>Consult today</Button>
         </div>
 
         <img src="/illustration.png" alt="healthcare services" />
@@ -32,7 +33,7 @@ export function Home() {
 
         <BoxServiceCard />
 
-        <button>Learn more</button>
+        <Button inverted>Learn more</Button>
       </section>
 
       <div id="find" />
@@ -46,7 +47,7 @@ export function Home() {
 
           <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it's not just work. We take pride in the solutions we deliver</p>
 
-          <button>Learn more</button>
+          <Button inverted>Learn more</Button>
         </div>
       </section>
 
@@ -59,10 +60,7 @@ export function Home() {
 
           <p>Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious form, long calls, or administrative hassle) and securely</p>
 
-          <button>
-            Download
-            <HiOutlineArrowNarrowDown size={24} />
-          </button>
+          <Button icon={IoIosArrowDown} inverted>Download</Button>
         </div>
 
         <img src="/illustration_3.png" alt="App" />
@@ -102,7 +100,7 @@ export function Home() {
           />
         </div>
 
-        <button>View all</button>
+        <Button inverted>View all</Button>
       </section>
     </main>
   );

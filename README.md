@@ -1,7 +1,5 @@
 # ![Trafalgar](/public/logo-light.svg)
 
-![Test](.github/cover.png)
-
 ## ✨ Tecnologias
 
 - [Vite](https://vitejs.dev/)

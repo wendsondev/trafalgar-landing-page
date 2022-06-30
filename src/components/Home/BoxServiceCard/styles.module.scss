@@ -3,13 +3,21 @@
   display: flex;
   justify-content: center;
   padding: 2rem;
-  
+
 
   .content {
-    max-width: 94rem;
+    max-width: 90rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: 0;
+
+    .content {
+      max-width: auto;
+    }
   }
 }

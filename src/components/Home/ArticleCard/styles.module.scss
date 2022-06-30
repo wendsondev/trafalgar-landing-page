@@ -1,5 +1,7 @@
 .container {
   max-width: 22rem;
+  display: flex;
+  flex-direction: column;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 1px 1px 7px var(--gray-500);
@@ -25,14 +27,46 @@
     p {
       color: var(--gray-500);
     }
+  }
 
-    a {
-      display: flex;
-      align-items: center;
-      padding: .5rem 0;
-      gap: .5rem;
-      font-weight: 700;
-      color: var(--blue-500);
+  a {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    margin-top: auto;
+    padding: .5rem 0;
+    gap: .5rem;
+    font-weight: 700;
+    color: var(--blue-500);
+    animation: .1s buttonHoverOut linear forwards;
+
+    &:hover {
+      animation: .3s buttonHoverIn linear forwards;
     }
+  }
+
+  @keyframes buttonHoverIn {
+    50% {
+      gap: 1rem;
+    }
+
+    100% {
+      gap: .75rem;
+    }
+  }
+
+  @keyframes buttonHoverOut {
+    from {
+      gap: .75rem;
+    }
+
+    to {
+      gap: .25rem;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    max-width: 100%;
   }
 }

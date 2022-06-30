@@ -20,14 +20,13 @@ export const SwiperButtonControl = ({ type = 'next' }: SwiperButtonControlProps)
       </button>
     );
   }
-  else {
-    return (
-      <button
-        className={styles.button}
-        onClick={() => swiper.slidePrev()}
-      >
-        <FaArrowLeft size={32} />
-      </button>
-    );
-  }
+
+  return (
+    <button
+      className={styles.button}
+      onClick={() => swiper.slidePrev()}
+    >
+      <FaArrowLeft size={32} />
+    </button>
+  );
 };
