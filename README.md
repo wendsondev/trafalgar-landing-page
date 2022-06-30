@@ -1,5 +1,7 @@
 # ![Trafalgar](/public/logo-light.svg)
 
+![Cover](.github/cover.png)
+
 ## ✨ Tecnologias
 
 - [Vite](https://vitejs.dev/)
@@ -9,16 +11,13 @@
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [Sass](https://sass-lang.com/)
 
-## 💻 Projeto
-![Projeto gif](.github/GIF.gif)
-
 ## Como executar
 
 Clone o projeto e acesse sua pasta
 
 ```bash
 $ git clone https://github.com/wendson13/trafalgar-landing-page.git
-cd trafalgar-landing-page
+$ cd trafalgar-landing-page
 ```
 
 Instale as dependências e execute o projeto com yarn ou npm
