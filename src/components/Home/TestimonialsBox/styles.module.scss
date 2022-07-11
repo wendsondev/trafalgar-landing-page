@@ -17,8 +17,6 @@
     gap: 1rem;
     padding: 4rem;
     border-radius: 1rem;
-    box-shadow: 1px 1px 7px var(--gray-500);
-    background: linear-gradient(var(--blue-200), var(--blue-400));
 
     h2 {
       font-size: 2.5rem;
@@ -130,6 +128,6 @@
     width: .75rem;
     height: .75rem;
     border-radius: 9999px;
-    background: var(--blue-500);
+    background: var(--blue-400);
   }
 }

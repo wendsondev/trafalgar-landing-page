@@ -1,9 +1,9 @@
-import styles from './styles.module.scss';
 import { HashLink } from 'react-router-hash-link';
+import styles from './styles.module.scss';
 
 export function Footer() {
   return (
-    <footer className={styles.container}>
+    <footer className={`${styles.container} gradient`}>
       <div className={styles.details}>
         <img src="/logo-light.svg" alt="trafalgar" />
 

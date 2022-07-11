@@ -1,91 +1,88 @@
 .container {
   display: flex;
   align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    font-size: 1.125rem;
+    font-weight: 700;
+    transition: color .3s, border .3s;
+  }
+
+  button {
+    display: flex;
+    border: 0;
+    background: transparent;
+  }
+}
+
+.menuMobile,
+.closeMenuMobile {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .menuMobile {
+    display: flex;
+  }
 
   .menu {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    width: 0;
+    height: 100vh;
+    transition: .5s;
+    gap: 3rem;
+    flex-direction: column;
+    padding-top: 8rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--blue-400);
+
+    &.active {
+      width: 70%;
+    }
 
     a {
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: var(--gray-500);
-      transition: color .3s, border .3s;
-
-      &:hover {
-        color: var(--blue-700);
-      }
-
-      &.active {
-        color: var(--blue-700)
-      }
-    }
-  }
-
-  .menuMobile,
-  .closeMenuMobile {
-    display: none;
-  }
-
-  @media screen and (max-width: 750px) {
-    .menuMobile {
-      display: flex;
+      font-size: 2rem;
       color: var(--blue-700);
-    }
-
-    .menu {
-      width: 0;
-      height: 100vh;
-      transition: .5s;
-      gap: 3rem;
-      flex-direction: column;
-      padding-top: 8rem;
-      overflow: hidden;
-
-      position: fixed;
-      top: 0;
-      right: 0;
-      background: var(--blue-400);
+      padding-bottom: 1rem;
+      margin: 0 1rem;
+      white-space: nowrap;
+      border-bottom: .2rem solid transparent;
+      opacity: 1;
 
       &.active {
-        width: 70%;
-      }
-
-      a {
-        font-size: 2rem;
-        color: var(--blue-700);
-        padding-bottom: 1rem;
-        margin: 0 1rem;
-        white-space: nowrap;
-        border-bottom: .2rem solid transparent;
-        opacity: 1;
-
-        &.active {
-          color: var(--white);
-          border-bottom: .2rem solid var(--white);
-        }
+        color: var(--white);
+        border-bottom: .2rem solid var(--white);
       }
     }
+  }
 
-    .closeMenuMobile {
-      display: flex;
-      color: var(--white);
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1001;
+  .closeMenuMobile {
+    display: flex;
+    color: var(--white);
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
 
-      animation: fadeMenu .4s linear;
+    animation: fadeMenu .4s linear;
 
-      @keyframes fadeMenu {
-        from {
-          opacity: 0%;
-        }
+    @keyframes fadeMenu {
+      from {
+        opacity: 0%;
+      }
 
-        to {
-          opacity: 100%;
-        }
+      to {
+        opacity: 100%;
       }
     }
   }

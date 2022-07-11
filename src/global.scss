@@ -5,14 +5,21 @@
 }
 
 :root {
-  --black: #1d2c3e;
+  --black: #0f0f0f;
   --white: #FFFFFF;
+
+  --gray-100: #F1F1F1;
+  --gray-200: #d4d4d4;
+  --gray-300: #9F9F9F;
   --gray-500: #7D7987;
 
-  --blue-200: #67C3F3;
-  --blue-400: #5A98F2;
-  --blue-500: #458FF6;
+  --blue-100: #67C3F3;
+  --blue-200: #5A98F2;
+  --blue-300: #458FF6;
+  --blue-400: #457FD5;
+  --blue-500: #08479D;
   --blue-700: #233348;
+  --blue-800: #1d2c3e;
 
   --purple-700: #1F1534;
 }
@@ -59,4 +66,94 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.light {
+  .text {
+    color: var(--blue-800);
+  }
+
+  .textSecondary {
+    color: var(--gray-500);
+  }
+
+  .background {
+    background-color: var(--white);
+  }
+
+  .backgroundSecondary {
+    background-color: var(--white);
+  }
+
+  .gradient {
+    background: linear-gradient(var(--blue-100), var(--blue-200));
+  }
+
+  .mark {
+    background-color: var(--blue-800);
+  }
+
+  .markText {
+    color: var(--blue-700);
+  }
+
+  .hover {
+    &:hover {
+      color: var(--blue-700);
+    }
+  }
+
+  .shadow {
+    box-shadow: 1px 1px 7px var(--gray-500)
+  }
+}
+
+.dark {
+  .text {
+    color: var(--gray-100);
+  }
+
+  .textSecondary {
+    color: var(--gray-300);
+  }
+
+  .background {
+    background-color: var(--blue-800);
+  }
+
+  .backgroundSecondary {
+    background-color: var(--blue-700);
+  }
+
+  .gradient {
+    background: linear-gradient(var(--blue-500), var(--blue-400));
+  }
+
+  .mark {
+    background-color: var(--gray-200);
+  }
+
+  .markText {
+    color: var(--gray-100);
+  }
+
+  .hover {
+    &:hover {
+      color: var(--gray-100);
+    }
+  }
+
+  .shadow {
+    box-shadow: 3px 3px 7px var(--black);
+  }
+}
+
+.aniRotation {
+  animation: rotation .5s linear;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg)
+  }
 }

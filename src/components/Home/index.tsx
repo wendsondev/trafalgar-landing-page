@@ -8,13 +8,13 @@ import { TestimonialsBox } from './TestimonialsBox';
 export function Home() {
 
   return (
-    <main className={styles.container}>
+    <main className={`${styles.container} background`}>
       <div id="home" />
       <section className={styles.services}>
         <div>
-          <h1>Virtual healthcare for you</h1>
+          <h1 className="text">Virtual healthcare for you</h1>
 
-          <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone</p>
+          <p className="textSecondary">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone</p>
 
           <Button>Consult today</Button>
         </div>
@@ -24,11 +24,11 @@ export function Home() {
 
       <section className={styles.ourServices}>
         <div className={styles.headerOurServices}>
-          <h2>Our services</h2>
+          <h2 className="text">Our services</h2>
 
-          <div />
+          <div className={`${styles.separator} mark`} />
 
-          <p>We provide to you the best choices for you. Adjust it to you health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
+          <p className="textSecondary">We provide to you the best choices for you. Adjust it to you health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
         </div>
 
         <BoxServiceCard />
@@ -41,11 +41,11 @@ export function Home() {
         <img src="/illustration_2.png" alt="find a doctor" />
 
         <div>
-          <h2>Leading healthcare providers</h2>
+          <h2 className="text">Leading healthcare providers</h2>
 
-          <div />
+          <div className={`${styles.separator} mark`} />
 
-          <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it's not just work. We take pride in the solutions we deliver</p>
+          <p className="textSecondary">Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it's not just work. We take pride in the solutions we deliver</p>
 
           <Button inverted>Learn more</Button>
         </div>
@@ -54,11 +54,11 @@ export function Home() {
       <div id="apps" />
       <section className={styles.apps}>
         <div>
-          <h2>Download our mobile apps</h2>
+          <h2 className="text">Download our mobile apps</h2>
 
-          <div />
+          <div className={`${styles.separator} mark`} />
 
-          <p>Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious form, long calls, or administrative hassle) and securely</p>
+          <p className="textSecondary">Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious form, long calls, or administrative hassle) and securely</p>
 
           <Button icon={IoIosArrowDown} inverted>Download</Button>
         </div>
@@ -73,7 +73,7 @@ export function Home() {
 
       <div id="about" />
       <section className={styles.aboutUs}>
-        <h2>Check out our latest article</h2>
+        <h2 className="text">Check out our latest article</h2>
 
         <div className={styles.aboutUsSeparator} />
 

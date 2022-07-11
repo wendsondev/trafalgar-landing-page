@@ -6,14 +6,14 @@ type ServiceCardProps = {
   description: string;
 }
 
-export function ServiceCard ({ src, title, description } : ServiceCardProps) {
+export function ServiceCard({ src, title, description }: ServiceCardProps) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} backgroundSecondary shadow`}>
       <img src={src} alt={title} />
 
-      <strong>{title}</strong>
+      <strong className="text">{title}</strong>
 
-      <p>{description}</p>
+      <p className="textSecondary">{description}</p>
     </div>
   );
 }

@@ -6,192 +6,161 @@
   gap: 8rem;
   padding: 2rem;
   margin-top: 5rem;
+}
 
-  .services {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+.separator {
+  width: 5rem;
+  height: .25rem;
+  border-radius: 9999px;
+}
 
-    >div {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      max-width: 28rem;
+.services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 
-      h1 {
-        font-size: 3rem;
-        color: var(--black);
-      }
-
-      p {
-        font-size: 1.5rem;
-        color: var(--gray-500);
-      }
-    }
-
-    img {
-      max-height: 38rem;
-    }
-  }
-
-  .ourServices {
+  >div {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     gap: 2rem;
+    max-width: 28rem;
 
-    .headerOurServices {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      max-width: 60rem;
-      text-align: center;
+    h1 {
+      font-size: 3rem;
+    }
 
-      h2 {
-        font-size: 2.5rem;
-        color: var(--black);
-      }
-
-      >div {
-        max-width: 5rem;
-        height: .25rem;
-        border-radius: 9999px;
-        background: var(--black);
-      }
-
-      p {
-        font-size: 1.5rem;
-        color: var(--gray-500);
-      }
+    p {
+      font-size: 1.5rem;
     }
   }
 
-  .findADoctor {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-
-    img {
-      max-width: 40rem;
-    }
-
-    >div {
-      max-width: 30rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-
-      h2 {
-        font-size: 2.5rem;
-        color: var(--black);
-      }
-
-      >div {
-        max-width: 5rem;
-        height: .25rem;
-        border-radius: 9999px;
-        background: var(--black);
-      }
-
-      p {
-        font-size: 1.5rem;
-        color: var(--gray-500);
-      }
-    }
+  img {
+    max-height: 38rem;
   }
+}
 
-  .apps {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+.ourServices {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
 
-    img {
-      width: 40rem;
-    }
-
-    >div {
-      width: 28rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-left: 4rem;
-
-      h2 {
-        font-size: 2.5rem;
-        color: var(--black);
-      }
-
-      >div {
-        width: 5rem;
-        height: .25rem;
-        border-radius: 9999px;
-        background: var(--black);
-      }
-
-      p {
-        font-size: 1.5rem;
-        color: var(--gray-500);
-      }
-    }
-  }
-
-  .aboutUs {
-    width: 100%;
+  .headerOurServices {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
-    margin-bottom: 4rem;
+    gap: 2rem;
+    max-width: 60rem;
+    text-align: center;
 
     h2 {
       font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--black);
     }
 
-    .aboutUsSeparator {
-      width: 3.5rem;
-      height: .2rem;
-      border-radius: 9999px;
-      background: var(--black);
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.findADoctor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  img {
+    max-width: 40rem;
+  }
+
+  >div {
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
     }
 
-    .articleCardBox {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  img {
+    width: 40rem;
+  }
+
+  >div {
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.aboutUs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .articleCardBox {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    gap: 2.5rem;
+    padding: 1rem;
+  }
+
+  .services,
+  .findADoctor,
+  .apps {
+    >img {
+      width: 100%;
     }
   }
 
-  @media screen and (max-width: 720px) {
-    & {
-      gap: 2.5rem;
-      padding: 1rem;
-    }
+  .services {
+    >div {
 
-    .services,
-    .findADoctor,
-    .apps {
-      >img {
-        width: 100%;
-      }
-    }
-
-    .services {
-      >div {
-
-        h1 {
-          font-size: 2.5rem;
-        }
+      h1 {
+        font-size: 2.5rem;
       }
     }
   }

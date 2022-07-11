@@ -6,9 +6,7 @@
   justify-content: center;
   align-items: flex-start;
   padding: 2rem;
-  box-shadow: 1px 1px 7px var(--gray-500);
   border-radius: 1rem;
-  background: var(--white);
 
   img {
     height: 6rem;
@@ -18,12 +16,7 @@
   strong {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--black);
     margin-bottom: .5rem;
-  }
-
-  p {
-    color: var(--gray-500);
   }
 
   @media screen and (max-width: 720px) {

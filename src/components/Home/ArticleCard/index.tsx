@@ -10,13 +10,13 @@ type ArticleCardProps = {
 
 export function ArticleCard({ imgUrl, title, summary, link }: ArticleCardProps) {
   return (
-    <article className={styles.container}>
+    <article className={`${styles.container} backgroundSecondary shadow`}>
       <img src={imgUrl} alt={title} />
 
       <div>
-        <strong>{title}</strong>
+        <strong className="text">{title}</strong>
 
-        <p>{summary}</p>
+        <p className="textSecondary">{summary}</p>
       </div>
 
       <a href={link}>

@@ -1,8 +1,8 @@
-import { testimonials } from '../../../util/testimonialsData';
-import styles from './styles.module.scss';
-import { Autoplay, Pagination, Keyboard, Navigation } from 'swiper';
+import { Autoplay, Keyboard, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { testimonials } from '../../../util/testimonialsData';
 import { SwiperButtonControl } from '../../SwiperButtonControl';
+import styles from './styles.module.scss';
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -31,7 +31,7 @@ export function TestimonialsBox() {
           return (
             <SwiperSlide key={item.id}>
               <div className={styles.container}>
-                <div className={styles.testimonial}
+                <div className={`${styles.testimonial} gradient shadow`}
                 >
                   <h2>What our customer are saying</h2>
 
