@@ -10,29 +10,51 @@
 - [React Router](https://reactrouter.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [Sass](https://sass-lang.com/)
+- [Swiper](https://swiperjs.com/)
 
 ## Como executar
 
 Clone o projeto e acesse sua pasta
 
 ```bash
-$ git clone https://github.com/wendson13/trafalgar-landing-page.git
-$ cd trafalgar-landing-page
+git clone https://github.com/wendson13/trafalgar-landing-page.git
+```
+```bash
+cd trafalgar-landing-page
 ```
 
 Instale as dependências e execute o projeto com yarn ou npm
 
-```bash
-# instalar dependências
-$ yarn
-  ou
-$ npm i
+<details open>
+  <summary>yarn</summary>
 
+  ```bash
+# instalar dependências
+    yarn
+  ```
+
+  ```bash
 # executar o projeto
-$ yarn dev
-  ou
-$ npm run dev
-```
+    yarn dev
+  ```
+</details>
+
+<details>
+  <summary>npm</summary>
+
+  ```bash
+# instalar dependências
+    npm i
+  ```
+
+  ```bash
+# executar o projeto
+    npm run dev
+  ```
+</details>
+
+<br />
+
 acesse o projeto em [localhost:3000](http://localhost:3000) em seu navegador.
 
 ## 📌 Layout
